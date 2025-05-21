@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elosaúde</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela Inicial -->
+        <div id="home-screen" class="screen active">
+            <div class="header">
+                <div class="greeting">Olá, Victor</div>
+                <div class="header-icons">
+                    <div class="notification-icon" id="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                        <div class="notification-tooltip">
+                            <div class="notification-item">Autorização de exames aprovada</div>
+                            <div class="notification-item alert">Boleto vencido!</div>
+                            <div class="notification-item alert">Identificamos 3 mensalidades em aberto, entre em contato urgente!</div>
+                        </div>
+                    </div>
+                    <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-logo">
+                        <img src="https://via.placeholder.com/50x50/0088ff/ffffff?text=E" alt="Elosaúde Logo">
+                    </div>
+                    <button class="btn-primary" id="btn-carteirinha">Ver carteirinha</button>
+                </div>
+            </div>
+
+            <div class="services-container">
+                <h2>Serviços</h2>
+                <div class="service-item" id="btn-extrato">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="service-text">Extrato de Utilização</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-boletos">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="service-text">Boletos</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-coparticipacao">
+                    <div class="service-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="service-text">Coparticipação</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-negociacao">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="service-text">Negociação de Dívidas</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-beneficiarios">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-text">Inclusão de Beneficiários</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-receitas">
+                    <div class="service-icon">
+                        <i class="fas fa-prescription"></i>
+                    </div>
+                    <div class="service-text">Vencimento de Receitas</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-pontos">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="service-text">Sistema de Pontuação</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-agendamento">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="service-text">Agendamento</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-item active">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela da Carteirinha -->
+        <div id="carteirinha-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-carteirinha">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Carteirinha</div>
+            </div>
+
+            <div class="carteirinha-container">
+                <div class="carteirinha">
+                    <div class="carteirinha-header">
+                        <img src="https://via.placeholder.com/80x30/0088ff/ffffff?text=Elosaúde" alt="Elosaúde Logo">
+                        <div class="carteirinha-tipo">PLANO DE SAÚDE</div>
+                    </div>
+                    <div class="carteirinha-info">
+                        <div class="info-row">
+                            <div class="info-label">Nome:</div>
+                            <div class="info-value">Victor Silva</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Cartão:</div>
+                            <div class="info-value">123456789</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Plano:</div>
+                            <div class="info-value">PREMIUM</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Validade:</div>
+                            <div class="info-value">INDETERMINADA</div>
+                        </div>
+                    </div>
+                    <div class="carteirinha-footer">
+                        <div class="qrcode">
+                            <img src="https://via.placeholder.com/100x100/000000/ffffff" alt="QR Code">
+                        </div>
+                        <div class="carteirinha-obs">
+                            Em caso de dúvidas, entre em contato: (48) 3333-4444
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Extrato de Utilização -->
+        <div id="extrato-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-extrato">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Extrato de Utilização</div>
+            </div>
+
+            <div class="extrato-summary">
+                <div class="summary-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="summary-content">
+                    <div class="summary-label">Total</div>
+                    <div class="summary-value">R$ 1.247,85</div>
+                </div>
+            </div>
+
+            <div class="extrato-details">
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em consultas</div>
+                        <div class="detail-value">R$ 583,25</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em exames/terapias</div>
+                        <div class="detail-value">R$ 347,60</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em odontologia</div>
+                        <div class="detail-value">R$ 125,00</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em internação</div>
+                        <div class="detail-value">R$ 0,00</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em outros</div>
+                        <div class="detail-value">R$ 192,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="historico-container">
+                <h2>Histórico</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+
+                <div class="date-group">
+                    <div class="date-header">12/02/2025</div>
+                    
+                    <div class="historico-item">
+                        <div class="item-icon green">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">RX - TÓRAX - 2 INCIDÊNCIAS</div>
+                            <div class="item-category">Outros</div>
+                        </div>
+                        <div class="item-value">R$ 87,50</div>
+                    </div>
+
+                    <div class="historico-item">
+                        <div class="item-icon green">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">RX - SEIOS DA FACE</div>
+                            <div class="item-category">Outros</div>
+                        </div>
+                        <div class="item-value">R$ 104,50</div>
+                    </div>
+
+                    <div class="historico-item">
+                        <div class="item-icon pink">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">CONSULTA EM PRONTO ATENDIMENTO</div>
+                            <div class="item-category">Consultas</div>
+                        </div>
+                        <div class="item-value">R$ 180,00</div>
+                    </div>
+                </div>
+
+                <div class="date-group">
+                    <div class="date-header">19/12/2024</div>
+                    
+                    <div class="historico-item">
+                        <div class="item-icon pink">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">CONSULTA EM CONSULTÓRIO</div>
+                            <div class="item-category">Consultas</div>
+                        </div>
+                        <div class="item-value">R$ 150,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <div class="filter-button">
+                    <i class="fas fa-filter"></i>
+                    <span>Filtrado por</span>
+                    <span class="filter-value">Este mês</span>
+                </div>
+                <div class="download-button">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Boletos -->
+        <div id="boletos-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-boletos">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Boletos</div>
+            </div>
+
+            <div class="boletos-list">
+                <div class="boleto-list-item">
+                    <div class="boleto-list-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="boleto-list-content">
+                        <div class="boleto-list-title">Mensalidade - Maio/2025</div>
+                        <div class="boleto-list-details">Vencimento: 10/06/2025</div>
+                    </div>
+                    <div class="boleto-list-value">R$ 305,77</div>
+                    <div class="boleto-list-status status-open">Em aberto</div>
+                </div>
+                
+                <div class="boleto-list-item">
+                    <div class="boleto-list-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="boleto-list-content">
+                        <div class="boleto-list-title">Coparticipação - Abril/2025</div>
+                        <div class="boleto-list-details">Vencimento: 10/06/2025</div>
+                    </div>
+                    <div class="boleto-list-value">R$ 60,88</div>
+                    <div class="boleto-list-status status-open">Em aberto</div>
+                </div>
+                
+                <div class="boleto-list-item">
+                    <div class="boleto-list-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="boleto-list-content">
+                        <div class="boleto-list-title">Coparticipação - Março/2025</div>
+                        <div class="boleto-list-details">Vencimento: 10/06/2025</div>
+                    </div>
+                    <div class="boleto-list-value">R$ 139,75</div>
+                    <div class="boleto-list-status status-open">Em aberto</div>
+                </div>
+                
+       
+(Content truncated due to size limit. Use line ranges to read in chunks)

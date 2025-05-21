@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elosaúde</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela Inicial -->
+        <div id="home-screen" class="screen active">
+            <div class="header">
+                <div class="greeting">Olá, Victor</div>
+                <div class="header-icons">
+                    <div class="notification-icon" id="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                        <div class="notification-tooltip">
+                            <div class="notification-grid">
+                                <div class="notification-grid-item">
+                                    <div class="notification-avatar">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-text">Autorização de exames aprovada</div>
+                                        <div class="notification-time">Hoje, 09:45</div>
+                                    </div>
+                                    <div class="notification-status"></div>
+                                </div>
+                                <div class="notification-grid-item">
+                                    <div class="notification-avatar" style="background-color: #e74c3c;">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-text"><b>Boleto vencido!</b></div>
+                                        <div class="notification-time">Ontem, 18:30</div>
+                                    </div>
+                                    <div class="notification-status"></div>
+                                </div>
+                                <div class="notification-grid-item">
+                                    <div class="notification-avatar" style="background-color: #e74c3c;">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-text"><b>Identificamos 3 mensalidades em aberto, entre em contato urgente!</b></div>
+                                        <div class="notification-time">15/05, 10:20</div>
+                                    </div>
+                                    <div class="notification-status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-logo">
+                        <img src="elosaude_semFundo.png" alt="Elosaúde Logo">
+                    </div>
+                    <button class="btn-primary" id="btn-carteirinha">Ver carteirinha</button>
+                </div>
+            </div>
+
+            <div class="services-container">
+                <h2>Serviços</h2>
+                <div class="service-item" id="btn-extrato">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="service-text">Extrato de Utilização</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-boletos">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="service-text">Boletos</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-coparticipacao">
+                    <div class="service-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="service-text">Coparticipação</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-negociacao">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="service-text">Negociação de Dívidas</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-beneficiarios">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-text">Inclusão de Beneficiários</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-receitas">
+                    <div class="service-icon">
+                        <i class="fas fa-prescription"></i>
+                    </div>
+                    <div class="service-text">Vencimento de Receitas</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-pontos">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="service-text">Sistema de Pontuação</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-agendamento">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="service-text">Agendamento</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-saude">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-text">Saúde e bem-estar</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-item active">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela da Carteirinha -->
+        <div id="carteirinha-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-carteirinha">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Carteirinha</div>
+            </div>
+
+            <div class="carteirinha-container">
+                <div class="carteirinha-carousel">
+                    <!-- Carteirinha Elosaúde -->
+                    <div class="carteirinha elosaude">
+                        <div class="carteirinha-header">
+                            <img src="elosaude_semFundo.png" alt="Elosaúde Logo" style="height: 30px;">
+                            <div class="carteirinha-tipo">SAÚDE</div>
+                        </div>
+                        <div class="carteirinha-info">
+                            <div class="info-row">
+                                <div class="info-label">Nome:</div>
+                                <div class="info-value">Victor Silva</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Cartão:</div>
+                                <div class="info-value">ELO-123456</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Plano:</div>
+                                <div class="info-value">PREMIUM</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Validade:</div>
+                                <div class="info-value">INDETERMINADA</div>
+                            </div>
+                        </div>
+                        <div class="carteirinha-footer">
+                            <div class="qrcode">
+                                <img src="https://via.placeholder.com/100x100/000000/ffffff" alt="QR Code">
+                            </div>
+                            <div class="carteirinha-obs">
+                                Em caso de dúvidas, entre em contato: (48) 3333-4444
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carteirinha Unimed -->
+                    <div class="carteirinha unimed">
+                        <div class="carteirinha-header">
+                            <img src="https://via.placeholder.com/80x30/4CAF50/ffffff?text=UNIMED" alt="Unimed Logo">
+                            <div class="carteirinha-tipo">SAÚDE</div>
+                        </div>
+                        <div class="carteirinha-info">
+                            <div class="info-row">
+                                <div class="info-label">Nome:</div>
+                                <div class="info-value">Victor Silva</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Cartão:</div>
+                                <div class="info-value">UNI-789012</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Plano:</div>
+                                <div class="info-value">NACIONAL</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Validade:</div>
+                                <div class="info-value">INDETERMINADA</div>
+                            </div>
+                        </div>
+                        <div class="carteirinha-footer">
+                            <div class="qrcode">
+                                <img src="https://via.placeholder.com/100x100/000000/ffffff" alt="QR Code">
+                            </div>
+                            <div class="carteirinha-obs">
+                                Em caso de dúvidas, entre em contato: (48) 3333-5555
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carteirinha Uniodonto -->
+                    <div class="carteirinha uniodonto">
+                        <div class="carteirinha-header">
+                            <img src="https://via.placeholder.com/80x30/F44336/ffffff?text=UNIODONTO" alt="Uniodonto Logo">
+                            <div class="carteirinha-tipo">DENTÁRIO</div>
+                        </div>
+                        <div class="carteirinha-info">
+                            <div class="info-row">
+                                <div class="info-label">Nome:</div>
+                                <div class="info-value">Victor Silva</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Cartão:</div>
+                                <div class="info-value">ODO-345678</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Plano:</div>
+                                <div class="info-value">COMPLETO</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Validade:</div>
+                                <div class="info-value">INDETERMINADA</div>
+                            </div>
+                        </div>
+                        <div class="carteirinha-footer">
+                            <div class="qrcode">
+                                <img src="https://via.placeholder.com/100x100/000000/ffffff" alt="QR Code">
+                            </div>
+                            <div class="carteirinha-obs">
+                                Em caso de dúvidas, entre em contato: (48) 3333-6666
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carteirinha Funcional -->
+                    <div class="carteirinha funcional">
+                        <div class="carteirinha-header">
+                            <img src="https://via.placeholder.com/80x30/3F51B5/ffffff?text=FUNCIONAL" alt="Funcional Logo">
+                            <div class="carteirinha-tipo">FARMÁCIA</div>
+                        </div>
+                        <div class="carteirinha-info">
+                            <div class="info-row">
+                                <div class="info-label">Nome:</div>
+                                <div class="info-value">Victor Silva</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Cartão:</div>
+                                <div class="info-value">FUN-901234</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Plano:</div>
+                                <div class="info-value">DESCONTO</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Validade:</div>
+                                <div class="info-value">INDETERMINADA</div>
+                            </div>
+                        </div>
+                        <div class="carteirinha-footer">
+                            <div class="qrcode">
+                                <img src="https://via.placeholder.com/100x100/000000/ffffff" alt="QR Code">
+                            </div>
+                            <div class="carteirinha-obs">
+                                Em caso de dúvidas, entre em contato: (48) 3333-7777
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                    <div class="indicator" data-index="3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Extrato de Utilização -->
+        <div id="extrato-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-extrato">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Extrato de Utilização</div>
+            </div>
+
+            <div class="extrato-summary">
+                <div class="summary-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="summary-content">
+                    <div class="summary-label">Total</div>
+                    <div class="summary-value">R$ 1.247,85</div>
+                </div>
+            </div>
+
+            <div class="extrato-details">
+                <div class="detail-item">
+                    <div class="detail-icon pink">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em consultas</div>
+                        <div class="detail-value">R$ 583,25</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon blue">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em exames/terapias</div>
+                        <div class="detail-value">R$ 347,60</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon orange">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em odontologia</div>
+                        <div class="detail-value">R$ 125,00</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon purple">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em internação</div>
+                        <div class="detail-value">R$ 0,00</div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon green">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="detail-content">
+                        <div class="detail-label">Total em outros</div>
+                        <div class="detail-value">R$ 192,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="historico-container">
+                <h2>Histórico</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+
+                <div class="date-group">
+                    <div class="date-header">12/02/2025</div>
+                    
+                    <div class="historico-item">
+                        <div class="item-icon green">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">RX - TÓRAX - 2 INCIDÊNCIAS</div>
+                            <div class="item-category">Outros</div>
+                        </div>
+                        <div class="item-value">R$ 87,50</div>
+                    </div>
+
+                    <div class="historico-item">
+                        <div class="item-icon green">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">RX - SEIOS DA FACE</div>
+                            <div class="item-category">Outros</div>
+                        </div>
+                        <div class="item-value">R$ 104,50</div>
+                    </div>
+
+                    <div class="historico-item">
+                        <div class="item-icon pink">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">CONSULTA EM PRONTO ATENDIMENTO</div>
+                            <div class="item-category">Consultas</div>
+                        </div>
+                        <div class="item-value">R$ 180,00</div>
+                    </div>
+                </div>
+
+                <div class="date-group">
+                    <div class="date-header">19/12/2024</div>
+                    
+                    <div class="historico-item">
+                        <div class="item-icon pink">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">CONSULTA EM CONSULTÓRIO</div>
+                            <div class="item-category">Consultas</div>
+                        </div>
+                        <div class="item-value">R$ 150,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <div class="filter-button">
+                    <i class="fas fa-filter"></i>
+                    <span>Filtrado por</span>
+                    <span class="filter-value">Este mês</span>
+                </div>
+                <div class="download-button">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Boletos -->
+        <div id="boletos-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-boletos">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Boletos</div>
+            </div>
+
+            <div class="boletos-table">
+                <div class="table-header">
+                    <div class="table-cell">Vencimento</div>
+                    <div class="table-cell">Tipo</div>
+                    <div class="table-cell">Valor</div>
+                    <div class="table-cell">Situação</div>
+                </div>
+                
+                <div class="table-row" data-boleto="1">
+                    <div class="table-cell">10/06/2025</div>
+                    <div class="table-cell">Coparticipação</div>
+                    <div class="table-cell">R$ 60,88</div>
+                    <div class="table-cell"><span class="boleto-list-status status-open">Em aberto</span></div>
+                </div>
+                
+                <div class="table-row" data-boleto="2">
+                    <div class="table-cell">10/06/2025</div>
+                    <div class="table-cell">Mensalidade</div>
+                    <div class="table-cell">R$ 305,77</div>
+                    <div class="table-cell"><span class="boleto-list-status status-partial">Parcial</span></div>
+                </div>
+                
+                <div class="table-row" data-boleto="3">
+                    <div class="table-cell">10/06/2025</div>
+                    <div class="table-cell">Coparticipação</div>
+                    <div class="table-cell">R$ 139,75</div>
+                    <div class="table-cell"><span class="boleto-list-status status-open">Em aberto</span></div>
+                </div>
+                
+                <div class="table-row" data-boleto="4">
+                    <div class="table-cell">10/05/2025</div>
+                    <div class="table-cell">Mensalidade</div>
+                    <div class="table-cell">R$ 305,77</div>
+                    <div class="table-cell"><span class="boleto-list-status status-late">Vencido</span></div>
+                </div>
+                
+                <div class="table-row" data-boleto="5">
+                    <div class="table-cell">10/04/2025</div>
+                    <div class="table-cell">Mensalidade</div>
+                    <div class="table-cell">R$ 305,77</div>
+                    <div class="table-cell"><span class="boleto-list-status status-late">Vencido</span></div>
+                </div>
+            </div>
+
+            <div class="boleto-container" id="boleto-detail-1">
+                <div class="boleto-info">
+                    <div class="boleto-header">
+                        <div class="boleto-title">Coparticipação - Abril/2025</div>
+                        <div class="boleto-status">Em aberto</div>
+                    </div>
+                    <div class="boleto-details">
+                        <div class="boleto-row">
+                            <div class="boleto-label">Vencimento:</div>
+                            <div class="boleto-value">10/06/2025</div>
+                        </div>
+                        <div class="boleto-row">
+                            <div class="boleto-label">Valor:</div>
+                            <div class="boleto-value">R$ 60,88</div>
+                        </div>
+                        <div class="boleto-row">
+                            <div class="boleto-label">Código de barras:</div>
+                            <div class="boleto-value">23793.38128 90000.100045 07000.063305 9 92150000006088</div>
+                        </div>
+                    </div>
+                    <div class="boleto-actions">
+                        <button class="btn-secondary">Copiar código</button>
+                        <button class="btn-primary">Ver boleto</button>
+                    </div>
+                </div>
+
+                <div class="boleto-image">
+                    <img src="https://via.placeholder.com/350x500/f5f5f5/333333?text=Boleto+Bancário" alt="Boleto">
+                </div>
+
+                <div class="boleto-qrcode">
+                    <div class="qrcode-title">Pague via PIX</div>
+                    <div class="qrcode-image">
+                        <img src="https://via.placeholder.com/200x200/000000/ffffff" alt="QR Code PIX">
+                    </div>
+                    <button class="btn-secondary">Copiar código PIX</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Coparticipação -->
+        <div id="coparticipacao-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-coparticipacao">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Extrato de Coparticipação</div>
+                <div class="header-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+
+            <div class="coparticipacao-filters">
+                <div class="filter-group">
+                    <div class="filter-label">CPF</div>
+                    <div class="filter-input">089.045.157-50</div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-label">Ano</div>
+                    <div class="filter-select">
+                        2025 <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coparticipacao-month">
+                <div class="month-title">Maio/2025</div>
+                <button class="btn-download">
+                    <i class="fas fa-download"></i> Baixar em PDF
+                </button>
+            </div>
+
+            <div class="coparticipacao-table">
+                <div class="table-header">
+                    <div class="table-cell">Beneficiário</div>
+                    <div class="table-cell">Despesa</div>
+                    <div class="table-cell">Participação</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">RENATA DE ANDRADE MAFRA</div>
+                    <div class="table-cell">R$ 139,82</div>
+                    <div class="table-cell">R$ 27,96</div>
+                </div>
+            </div>
+
+            <div class="coparticipacao-total">
+                <div class="total-label">Total Geral</div>
+                <div class="total-values">
+                    <div class="total-group">
+                        <div class="total-title">Despesa</div>
+                        <div class="total-value">R$ 139,82</div>
+                    </div>
+                    <div class="total-group">
+                        <div class="total-title">Participação</div>
+                        <div class="total-value">R$ 27,96</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Negociação de Dívidas -->
+        <div id="negociacao-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-negociacao">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Negociação de Dívidas</div>
+            </div>
+
+            <div class="negociacao-container">
+                <div class="negociacao-info">
+                    <div class="negociacao-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="negociacao-title">Sua dívida é de</div>
+                    <div class="negociacao-value">R$ 5.567,00</div>
+                    <div class="negociacao-subtitle">Deseja parcelar em 5 vezes?</div>
+                </div>
+
+                <div class="negociacao-details">
+                    <div class="detail-row">
+                        <div class="detail-label">Valor da parcela:</div>
+                        <div class="detail-value">R$ 1.113,40</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Primeira parcela:</div>
+                        <div class="detail-value">10/06/2025</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Última parcela:</div>
+                        <div class="detail-value">10/10/2025</div>
+                    </div>
+                </div>
+
+                <div class="negociacao-options">
+                    <div class="option-title">Outras opções de parcelamento:</div>
+                    <div class="option-buttons">
+                        <button class="option-btn">3x</button>
+                        <button class="option-btn active">5x</button>
+                        <button class="option-btn">10x</button>
+                        <button class="option-btn">12x</button>
+                    </div>
+                </div>
+
+                <div class="negociacao-actions">
+                    <button class="btn-secondary">Cancelar</button>
+                    <button class="btn-primary">Confirmar parcelamento</button>
+                </div>
+
+                <div class="negociacao-qrcode">
+                    <div class="qrcode-title">Pague à vista com desconto via PIX</div>
+                    <div class="qrcode-discount">10% de desconto</div>
+                    <div class="qrcode-value">R$ 5.010,30</div>
+                    <div class="qrcode-image">
+                        <img src="https://via.placeholder.com/200x200/000000/ffffff" alt="QR Code PIX">
+                    </div>
+                    <button class="btn-secondary">Copiar código PIX</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Inclusão de Beneficiários -->
+        <div id="beneficiarios-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-beneficiarios">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Inclusão de Beneficiários</div>
+            </div>
+
+            <div class="beneficiarios-container">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" placeholder="Digite o nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="exemplo@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sexo</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="masculino" name="sexo" value="masculino">
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="feminino" name="sexo" value="feminino">
+                                <label for="feminino">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plano">Plano</label>
+                        <select id="plano">
+                            <option value="" disabled selected>Selecione o plano</option>
+                            <option value="basico">Plano Básico</option>
+                            <option value="standard">Plano Standard</option>
+                            <option value="premium">Plano Premium</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Documentos</label>
+                        <div class="file-upload">
+                            <button class="btn-secondary">
+                                <i class="fas fa-upload"></i> Anexar RG/CNH
+                            </button>
+                            <span class="file-name">Nenhum arquivo selecionado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn-secondary">Cancelar</button>
+                        <button class="btn-primary">Enviar solicitação</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Vencimento de Receitas -->
+        <div id="receitas-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-receitas">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Vencimento de Receitas</div>
+            </div>
+
+            <div class="receitas-container">
+                <div class="receitas-tabs">
+                    <div class="tab active">Ativas</div>
+                    <div class="tab">Vencidas</div>
+                    <div class="tab">Todas</div>
+                </div>
+
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar medicamento">
+                </div>
+
+                <div class="receitas-list">
+                    <div class="receita-item active">
+                        <div class="receita-icon">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <div class="receita-content">
+                            <div class="receita-title">ISOFLURANO</div>
+                            <div class="receita-details">
+                                <div class="receita-doctor">Dr. Carlos Mendes</div>
+                                <div class="receita-date">Válida até: 22/05/2026</div>
+                            </div>
+                        </div>
+                        <div class="receita-status">
+                            <span class="status-badge active">Ativo</span>
+                        </div>
+                    </div>
+
+                    <div class="receita-item alert">
+                        <div class="receita-icon">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <div class="receita-content">
+                            <div class="receita-title">FENTANIL</div>
+                            <div class="receita-details">
+                                <div class="receita-doctor">Dra. Maria Santos</div>
+                                <div class="receita-date">Válida até: 25/06/2025</div>
+                            </div>
+                        </div>
+                        <div class="receita-status">
+                            <span class="status-badge alert">Alerta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="receitas-actions">
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar nova receita
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Sistema de Pontuação -->
+        <div id="pontos-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-pontos">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Sistema de Pontuação</div>
+            </div>
+
+            <div class="pontos-container">
+                <div class="pontos-summary">
+                    <div class="pontos-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="pontos-content">
+                        <div class="pontos-label">Seus pontos</div>
+                        <div class="pontos-value">15.000</div>
+                    </div>
+                </div>
+
+                <div class="pontos-historico">
+                    <h2>Histórico de pontos</h2>
+                    
+                    <div class="pontos-item">
+                        <div class="pontos-item-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="pontos-item-content">
+                            <div class="pontos-item-title">Parabéns! Você ganhou 100 pontos por trazer um novo beneficiário para o plano.</div>
+                            <div class="pontos-item-date">19/05/2025</div>
+                        </div>
+                        <div class="pontos-item-value positive">+100</div>
+                    </div>
+                    
+                    <div class="pontos-item">
+                        <div class="pontos-item-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="pontos-item-content">
+                            <div class="pontos-item-title">Parabéns! Você ganhou 20 pontos por ter utilizado a carteirinha da Elosaúde.</div>
+                            <div class="pontos-item-date">19/05/2025</div>
+                        </div>
+                        <div class="pontos-item-value positive">+20</div>
+                    </div>
+                </div>
+
+                <div class="pontos-resgatar">
+                    <h2>Resgatar pontos</h2>
+                    <button class="btn-primary btn-resgatar" id="btn-resgatar-pontos">
+                        <i class="fas fa-gift"></i> Ver opções de resgate
+                    </button>
+                </div>
+                
+                <div class="pontos-opcoes-resgate" style="display: none;">
+                    <div class="resgatar-item">
+                        <div class="resgatar-image">
+                            <img src="https://via.placeholder.com/80x80/f5f5f5/333333?text=Nutrição" alt="Nutrição">
+                        </div>
+                        <div class="resgatar-content">
+                            <div class="resgatar-title">Consulta com Nutricionista</div>
+                            <div class="resgatar-points">15.000 pontos</div>
+                        </div>
+                        <button class="btn-resgate btn-available">Resgatar</button>
+                    </div>
+                    
+                    <div class="resgatar-item">
+                        <div class="resgatar-image">
+                            <img src="https://via.placeholder.com/80x80/f5f5f5/333333?text=JBL" alt="JBL">
+                        </div>
+                        <div class="resgatar-content">
+                            <div class="resgatar-title">Caixa JBL</div>
+                            <div class="resgatar-points">20.000 pontos</div>
+                        </div>
+                        <button class="btn-resgate">Resgatar</button>
+                    </div>
+                    
+                    <div class="resgatar-item">
+                        <div class="resgatar-image">
+                            <img src="https://via.placeholder.com/80x80/f5f5f5/333333?text=Academia" alt="Academia">
+                        </div>
+                        <div class="resgatar-content">
+                            <div class="resgatar-title">Desconto em Academia</div>
+                            <div class="resgatar-points">10.000 pontos</div>
+                        </div>
+                        <button class="btn-resgate btn-available">Resgatar</button>
+                    </div>
+                    
+                    <div class="resgatar-item">
+                        <div class="resgatar-image">
+                            <img src="https://via.placeholder.com/80x80/f5f5f5/333333?text=Check-up" alt="Check-up">
+                        </div>
+                        <div class="resgatar-content">
+                            <div class="resgatar-title">Check-up Completo</div>
+                            <div class="resgatar-points">25.000 pontos</div>
+                        </div>
+                        <button class="btn-resgate">Resgatar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Agendamento -->
+        <div id="agendamento-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-agendamento">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Agendamento</div>
+            </div>
+
+            <div class="agendamento-container">
+                <div class="agendamento-tabs">
+                    <div class="tab active">Consultas</div>
+                    <div class="tab">Exames</div>
+                </div>
+
+                <div class="agendamento-form">
+                    <div class="form-group">
+                        <label for="especialidade">Especialidade</label>
+                        <select id="especialidade">
+                            <option value="" disabled selected>Selecione a especialidade</option>
+                            <option value="clinico">Clínico Geral</option>
+                            <option value="cardio">Cardiologista</option>
+                            <option value="dermato">Dermatologista</option>
+                            <option value="ortopedista">Ortopedista</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="medico">Médico</label>
+                        <select id="medico">
+                            <option value="" disabled selected>Selecione o médico</option>
+                            <option value="dr-silva">Dr. João Silva</option>
+                            <option value="dra-santos">Dra. Maria Santos</option>
+                            <option value="dr-oliveira">Dr. Carlos Oliveira</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unidade">Unidade</label>
+                        <select id="unidade">
+                            <option value="" disabled selected>Selecione a unidade</option>
+                            <option value="centro">Centro Médico - Centro</option>
+                            <option value="norte">Centro Médico - Zona Norte</option>
+                            <option value="sul">Centro Médico - Zona Sul</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="agendamento-calendario">
+                    <div class="calendario-header">
+                        <div class="mes-atual">Maio 2025</div>
+                        <div class="calendario-nav">
+                            <button class="btn-nav"><i class="fas fa-chevron-left"></i></button>
+                            <button class="btn-nav"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="calendario-dias">
+                        <div class="dia-semana">Dom</div>
+                        <div class="dia-semana">Seg</div>
+                        <div class="dia-semana">Ter</div>
+                        <div class="dia-semana">Qua</div>
+                        <div class="dia-semana">Qui</div>
+                        <div class="dia-semana">Sex</div>
+                        <div class="dia-semana">Sáb</div>
+                        
+                        <div class="dia disabled">28</div>
+                        <div class="dia disabled">29</div>
+                        <div class="dia disabled">30</div>
+                        <div class="dia">1</div>
+                        <div class="dia">2</div>
+                        <div class="dia">3</div>
+                        <div class="dia">4</div>
+                        
+                        <div class="dia">5</div>
+                        <div class="dia">6</div>
+                        <div class="dia">7</div>
+                        <div class="dia">8</div>
+                        <div class="dia">9</div>
+                        <div class="dia">10</div>
+                        <div class="dia">11</div>
+                        
+                        <div class="dia">12</div>
+                        <div class="dia">13</div>
+                        <div class="dia">14</div>
+                        <div class="dia">15</div>
+                        <div class="dia">16</div>
+                        <div class="dia">17</div>
+                        <div class="dia">18</div>
+                        
+                        <div class="dia">19</div>
+                        <div class="dia">20</div>
+                        <div class="dia">21</div>
+                        <div class="dia">22</div>
+                        <div class="dia active">23</div>
+                        <div class="dia">24</div>
+                        <div class="dia">25</div>
+                        
+                        <div class="dia">26</div>
+                        <div class="dia">27</div>
+                        <div class="dia">28</div>
+                        <div class="dia">29</div>
+                        <div class="dia">30</div>
+                        <div class="dia">31</div>
+                        <div class="dia disabled">1</div>
+                    </div>
+                </div>
+
+                <div class="agendamento-horarios">
+                    <h3>Horários disponíveis - 23/05/2025</h3>
+                    <div class="horarios-lista">
+                        <div class="horario-item">08:00</div>
+                        <div class="horario-item">09:00</div>
+                        <div class="horario-item active">10:30</div>
+                        <div class="horario-item">13:00</div>
+                        <div class="horario-item">14:30</div>
+                        <div class="horario-item">16:00</div>
+                    </div>
+                </div>
+
+                <div class="agendamento-resumo">
+                    <h3>Resumo do agendamento</h3>
+                    <div class="resumo-item">
+                        <div class="resumo-label">Especialidade:</div>
+                        <div class="resumo-value">Clínico Geral</div>
+                    </div>
+                    <div class="resumo-item">
+                        <div class="resumo-label">Médico:</div>
+                        <div class="resumo-value">Dr. João Silva</div>
+                    </div>
+                    <div class="resumo-item">
+                        <div class="resumo-label">Unidade:</div>
+                        <div class="resumo-value">Centro Médico - Centro</div>
+                    </div>
+                    <div class="resumo-item">
+                        <div class="resumo-label">Data:</div>
+                        <div class="resumo-value">23/05/2025</div>
+                    </div>
+                    <div class="resumo-item">
+                        <div class="resumo-label">Horário:</div>
+                        <div class="resumo-value">10:30</div>
+                    </div>
+                </div>
+
+                <div class="agendamento-actions">
+                    <button class="btn-secondary">Cancelar</button>
+                    <button class="btn-primary">Confirmar agendamento</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Saúde e Bem-estar -->
+        <div id="saude-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-saude">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Saúde e bem-estar</div>
+            </div>
+
+            <div class="saude-container">
+                <div class="service-item" id="btn-diario">
+                    <div class="service-icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="service-text">Diário de saúde</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-medicamentos">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="service-text">Medicamentos</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-vacinas">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="service-text">Vacinas</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="service-item" id="btn-exames">
+                    <div class="service-icon">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                    <div class="service-text">Exames laboratoriais</div>
+                    <div class="service-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Diário de Saúde -->
+        <div id="diario-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-diario">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Diário de saúde</div>
+            </div>
+
+            <div class="diario-container">
+                <div class="diario-tabs">
+                    <div class="tab active">Todos</div>
+                    <div class="tab">Pressão</div>
+                    <div class="tab">Glicose</div>
+                    <div class="tab">Freq. cardíaca</div>
+                    <div class="tab">IMC</div>
+                </div>
+
+                <div class="saude-banner">
+                    <div class="banner-text">Saiba mais sobre o programa Peso Saudável</div>
+                    <div class="banner-icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="diario-cards">
+                    <div class="diario-card">
+                        <div class="diario-card-header">
+                            <div class="diario-card-title">Pressão arterial</div>
+                            <div class="diario-card-value">120/80 mmHg</div>
+                        </div>
+                        <div class="diario-card-footer">
+                            <div class="diario-card-date">Última medição: 18/05/2025</div>
+                            <div class="diario-card-status normal">Normal</div>
+                        </div>
+                    </div>
+
+                    <div class="diario-card">
+                        <div class="diario-card-header">
+                            <div class="diario-card-title">Glicose</div>
+                            <div class="diario-card-value">95 mg/dL</div>
+                        </div>
+                        <div class="diario-card-footer">
+                            <div class="diario-card-date">Última medição: 19/05/2025</div>
+                            <div class="diario-card-status normal">Normal</div>
+                        </div>
+                    </div>
+
+                    <div class="diario-card">
+                        <div class="diario-card-header">
+                            <div class="diario-card-title">Frequência cardíaca</div>
+                            <div class="diario-card-value">72 bpm</div>
+                        </div>
+                        <div class="diario-card-footer">
+                            <div class="diario-card-date">Última medição: 19/05/2025</div>
+                            <div class="diario-card-status normal">Normal</div>
+                        </div>
+                    </div>
+
+                    <div class="diario-card">
+                        <div class="diario-card-header">
+                            <div class="diario-card-title">IMC</div>
+                            <div class="diario-card-value">24.5</div>
+                        </div>
+                        <div class="diario-card-footer">
+                            <div class="diario-card-date">Última medição: 15/05/2025</div>
+                            <div class="diario-card-status normal">Normal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diario-add-button" id="btn-add-registro">
+                    <i class="fas fa-plus"></i>
+                    <span>Adicionar registro</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Registro de Pressão -->
+        <div id="modal-pressao" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Registro de Pressão</div>
+                    <div class="modal-close" id="close-modal-pressao"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pressao-sistolica">Sistólica</label>
+                        <input type="number" id="pressao-sistolica" placeholder="Ex: 120">
+                    </div>
+                    <div class="form-group">
+                        <label for="pressao-diastolica">Diastólica</label>
+                        <input type="number" id="pressao-diastolica" placeholder="Ex: 80">
+                    </div>
+                    <div class="form-group">
+                        <label for="pressao-data">Data</label>
+                        <input type="date" id="pressao-data">
+                    </div>
+                    <div class="form-group">
+                        <label for="pressao-hora">Hora</label>
+                        <input type="time" id="pressao-hora">
+                    </div>
+                    <div class="form-group">
+                        <label>O exame foi feito em jejum?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="pressao-jejum-sim" name="pressao-jejum" value="sim">
+                                <label for="pressao-jejum-sim">Sim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="pressao-jejum-nao" name="pressao-jejum" value="nao">
+                                <label for="pressao-jejum-nao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-pressao">Cancelar</button>
+                    <button class="btn-primary" id="save-pressao">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Registro de Glicose -->
+        <div id="modal-glicose" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Registro de Glicose</div>
+                    <div class="modal-close" id="close-modal-glicose"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="glicose-resultado">Resultado</label>
+                        <input type="number" id="glicose-resultado" placeholder="Ex: 95">
+                    </div>
+                    <div class="form-group">
+                        <label for="glicose-data">Data</label>
+                        <input type="date" id="glicose-data">
+                    </div>
+                    <div class="form-group">
+                        <label for="glicose-hora">Hora</label>
+                        <input type="time" id="glicose-hora">
+                    </div>
+                    <div class="form-group">
+                        <label>O exame foi feito em jejum?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="glicose-jejum-sim" name="glicose-jejum" value="sim">
+                                <label for="glicose-jejum-sim">Sim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="glicose-jejum-nao" name="glicose-jejum" value="nao">
+                                <label for="glicose-jejum-nao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-glicose">Cancelar</button>
+                    <button class="btn-primary" id="save-glicose">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Registro de Frequência Cardíaca -->
+        <div id="modal-frequencia" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Registro de Frequência Cardíaca</div>
+                    <div class="modal-close" id="close-modal-frequencia"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="frequencia-resultado">Resultado (bpm)</label>
+                        <input type="number" id="frequencia-resultado" placeholder="Ex: 72">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencia-data">Data</label>
+                        <input type="date" id="frequencia-data">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencia-hora">Hora</label>
+                        <input type="time" id="frequencia-hora">
+                    </div>
+                    <div class="form-group">
+                        <label>Estava em repouso?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="frequencia-repouso-sim" name="frequencia-repouso" value="sim">
+                                <label for="frequencia-repouso-sim">Sim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="frequencia-repouso-nao" name="frequencia-repouso" value="nao">
+                                <label for="frequencia-repouso-nao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-frequencia">Cancelar</button>
+                    <button class="btn-primary" id="save-frequencia">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Registro de IMC -->
+        <div id="modal-imc" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Registro de IMC</div>
+                    <div class="modal-close" id="close-modal-imc"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="imc-peso">Peso (kg)</label>
+                        <input type="number" id="imc-peso" placeholder="Ex: 70.5">
+                    </div>
+                    <div class="form-group">
+                        <label for="imc-altura">Altura (cm)</label>
+                        <input type="number" id="imc-altura" placeholder="Ex: 170">
+                    </div>
+                    <div class="form-group">
+                        <label for="imc-data">Data</label>
+                        <input type="date" id="imc-data">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-imc">Cancelar</button>
+                    <button class="btn-primary" id="save-imc">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Medicamentos -->
+        <div id="medicamentos-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-medicamentos">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Medicamentos</div>
+            </div>
+
+            <div class="medicamentos-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar medicamento">
+                </div>
+
+                <div class="medicamentos-list">
+                    <div class="medicamento-item">
+                        <div class="medicamento-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="medicamento-content">
+                            <div class="medicamento-title">Engov</div>
+                            <div class="medicamento-details">
+                                <div class="medicamento-dosagem">1 comprimido</div>
+                                <div class="medicamento-frequencia">A cada 8 horas</div>
+                            </div>
+                        </div>
+                        <div class="medicamento-actions">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                    <div class="medicamento-item">
+                        <div class="medicamento-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="medicamento-content">
+                            <div class="medicamento-title">Epocler</div>
+                            <div class="medicamento-details">
+                                <div class="medicamento-dosagem">1 ampola</div>
+                                <div class="medicamento-frequencia">1x ao dia</div>
+                            </div>
+                        </div>
+                        <div class="medicamento-actions">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="medicamentos-add-button" id="btn-add-medicamento">
+                    <i class="fas fa-plus"></i>
+                    <span>Adicionar medicamento</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Medicamento -->
+        <div id="modal-medicamento" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Medicamento</div>
+                    <div class="modal-close" id="close-modal-medicamento"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="medicamento-nome">Nome do medicamento</label>
+                        <input type="text" id="medicamento-nome" placeholder="Ex: Engov">
+                    </div>
+                    <div class="form-group">
+                        <label for="medicamento-dosagem">Dosagem</label>
+                        <input type="text" id="medicamento-dosagem" placeholder="Ex: 1 comprimido">
+                    </div>
+                    <div class="form-group">
+                        <label for="medicamento-frequencia">Frequência</label>
+                        <input type="text" id="medicamento-frequencia" placeholder="Ex: A cada 8 horas">
+                    </div>
+                    <div class="form-group">
+                        <label for="medicamento-inicio">Data de início</label>
+                        <input type="date" id="medicamento-inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="medicamento-fim">Data de término (opcional)</label>
+                        <input type="date" id="medicamento-fim">
+                    </div>
+                    <div class="form-group">
+                        <label>Deseja receber lembretes?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="medicamento-lembrete-sim" name="medicamento-lembrete" value="sim">
+                                <label for="medicamento-lembrete-sim">Sim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="medicamento-lembrete-nao" name="medicamento-lembrete" value="nao">
+                                <label for="medicamento-lembrete-nao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-medicamento">Cancelar</button>
+                    <button class="btn-primary" id="save-medicamento">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Vacinas -->
+        <div id="vacinas-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-vacinas">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Vacinas</div>
+            </div>
+
+            <div class="vacinas-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar vacina">
+                </div>
+
+                <div class="vacinas-list">
+                    <div class="vacina-item">
+                        <div class="vacina-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <div class="vacina-content">
+                            <div class="vacina-title">COVID-19</div>
+                            <div class="vacina-details">
+                                <div class="vacina-data">Data: 15/01/2025</div>
+                                <div class="vacina-dose">Dose: 4ª dose (reforço)</div>
+                            </div>
+                        </div>
+                        <div class="vacina-actions">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                    <div class="vacina-item">
+                        <div class="vacina-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <div class="vacina-content">
+                            <div class="vacina-title">Gripe (Influenza)</div>
+                            <div class="vacina-details">
+                                <div class="vacina-data">Data: 10/04/2025</div>
+                                <div class="vacina-dose">Dose: Anual</div>
+                            </div>
+                        </div>
+                        <div class="vacina-actions">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vacinas-add-button" id="btn-add-vacina">
+                    <i class="fas fa-plus"></i>
+                    <span>Adicionar vacina</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Vacina -->
+        <div id="modal-vacina" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Vacina</div>
+                    <div class="modal-close" id="close-modal-vacina"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="vacina-nome">Nome da vacina</label>
+                        <input type="text" id="vacina-nome" placeholder="Ex: COVID-19">
+                    </div>
+                    <div class="form-group">
+                        <label for="vacina-data">Data de aplicação</label>
+                        <input type="date" id="vacina-data">
+                    </div>
+                    <div class="form-group">
+                        <label for="vacina-dose">Dose</label>
+                        <select id="vacina-dose">
+                            <option value="" disabled selected>Selecione a dose</option>
+                            <option value="1">1ª dose</option>
+                            <option value="2">2ª dose</option>
+                            <option value="3">3ª dose</option>
+                            <option value="4">4ª dose (reforço)</option>
+                            <option value="anual">Dose anual</option>
+                            <option value="unica">Dose única</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vacina-local">Local de aplicação</label>
+                        <input type="text" id="vacina-local" placeholder="Ex: Posto de Saúde Central">
+                    </div>
+                    <div class="form-group">
+                        <label>Anexar comprovante</label>
+                        <div class="file-upload">
+                            <button class="btn-secondary">
+                                <i class="fas fa-upload"></i> Anexar comprovante
+                            </button>
+                            <span class="file-name">Nenhum arquivo selecionado</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vacina-proxima">Data da próxima dose (opcional)</label>
+                        <input type="date" id="vacina-proxima">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-vacina">Cancelar</button>
+                    <button class="btn-primary" id="save-vacina">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Exames Laboratoriais -->
+        <div id="exames-screen" class="screen">
+            <div class="header">
+                <div class="back-button" id="back-from-exames">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </div>
+                <div class="header-title">Exames Laboratoriais</div>
+            </div>
+
+            <div class="exames-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar exame">
+                </div>
+
+                <div class="exames-list">
+                    <div class="exame-item">
+                        <div class="exame-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <div class="exame-content">
+                            <div class="exame-title">Hemograma Completo</div>
+                            <div class="exame-details">
+                                <div class="exame-data">Data: 05/05/2025</div>
+                                <div class="exame-lab">Laboratório: Lab Análises</div>
+                            </div>
+                        </div>
+                        <div class="exame-actions">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+
+                    <div class="exame-item">
+                        <div class="exame-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <div class="exame-content">
+                            <div class="exame-title">Glicemia em Jejum</div>
+                            <div class="exame-details">
+                                <div class="exame-data">Data: 05/05/2025</div>
+                                <div class="exame-lab">Laboratório: Lab Análises</div>
+                            </div>
+                        </div>
+                        <div class="exame-actions">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+
+                    <div class="exame-item">
+                        <div class="exame-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <div class="exame-content">
+                            <div class="exame-title">Colesterol Total e Frações</div>
+                            <div class="exame-details">
+                                <div class="exame-data">Data: 05/05/2025</div>
+                                <div class="exame-lab">Laboratório: Lab Análises</div>
+                            </div>
+                        </div>
+                        <div class="exame-actions">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exames-add-button" id="btn-add-exame">
+                    <i class="fas fa-plus"></i>
+                    <span>Adicionar exame</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Adicionar Exame -->
+        <div id="modal-exame" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Adicionar Exame</div>
+                    <div class="modal-close" id="close-modal-exame"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exame-nome">Nome do exame</label>
+                        <input type="text" id="exame-nome" placeholder="Ex: Hemograma Completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="exame-data">Data do exame</label>
+                        <input type="date" id="exame-data">
+                    </div>
+                    <div class="form-group">
+                        <label for="exame-lab">Laboratório</label>
+                        <input type="text" id="exame-lab" placeholder="Ex: Lab Análises">
+                    </div>
+                    <div class="form-group">
+                        <label>Anexar resultado (PDF)</label>
+                        <div class="file-upload">
+                            <button class="btn-secondary">
+                                <i class="fas fa-upload"></i> Anexar PDF
+                            </button>
+                            <span class="file-name">Nenhum arquivo selecionado</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exame-obs">Observações (opcional)</label>
+                        <textarea id="exame-obs" rows="3" placeholder="Observações sobre o exame..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-exame">Cancelar</button>
+                    <button class="btn-primary" id="save-exame">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Visualizar PDF -->
+        <div id="modal-pdf" class="modal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <div class="modal-title">Resultado de Exame</div>
+                    <div class="modal-close" id="close-modal-pdf"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="pdf-viewer">
+                        <iframe src="about:blank" width="100%" height="500px"></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="close-pdf">Fechar</button>
+                    <button class="btn-primary" id="download-pdf">
+                        <i class="fas fa-download"></i> Baixar PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
